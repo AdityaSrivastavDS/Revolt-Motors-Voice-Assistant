@@ -32,6 +32,9 @@ Open http://localhost:3000 in your browser (the dev server also serves the clien
 - Interruption: start speaking any time — the model's audio is cut off.
 - This is a learning starter; production should add auth, rate limiting, and reconnection logic.
 
+## Important
+- The resource folder contains a demo video that how this Voice Assistant Works, check it once for reference.
+
 ## Useful docs
 - Get started with Live API: https://ai.google.dev/gemini-api/docs/live
 - WebSockets API reference: https://ai.google.dev/api/live
