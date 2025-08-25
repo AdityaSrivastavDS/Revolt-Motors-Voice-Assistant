@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revolt Live Voice Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">⚡ Revolt Motors Voice Assistant</h1>
+      <p class="subtitle">Talk, type, and interact with Gemini — all about Revolt Motors.</p>
+    </header>
+
+    <main class="card">
+      <div class="controls">
+        <button id="connectBtn" class="btn primary">🔗 Connect</button>
+        <button id="holdBtn" class="btn secondary" disabled>🎙️ Hold to Talk</button>
+        <input id="textBox" placeholder="Type your question about Revolt Motors..." />
+      </div>
+
+      <div class="meter"><div id="level"></div></div>
+      <canvas id="scope"></canvas>
+
+      <section class="transcripts">
+        <div class="panel">
+          <h3>You</h3>
+          <div id="inputT" class="log"></div>
+        </div>
+        <div class="panel">
+          <h3>Gemini</h3>
+          <div id="outputT" class="log"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>⚙️ Powered by Gemini Live API — Customized for Revolt Motors</p>
+    </footer>
+  </div>
+
+  <script src="./script.js" type="module"></script>
+</body>
+</html>

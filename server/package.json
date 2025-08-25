@@ -1,0 +1,16 @@
+{
+  "name": "gemini-live-server-to-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.15.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "wavefile": "^11.0.0",
+    "ws": "^8.17.0"
+  }
+}

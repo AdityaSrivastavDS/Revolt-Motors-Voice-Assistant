@@ -1,0 +1,159 @@
+/* General reset + theme */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #111 0%, #1c1c1c 100%);
+  color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(90deg, #ff1a1a, #ff6a00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0.3rem 0 0;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.controls input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2c2c2c;
+  color: #f3f4f6;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.controls input:focus {
+  background: #333;
+  box-shadow: 0 0 8px #ff1a1a;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #ff1a1a, #ff6a00);
+  color: #fff;
+}
+.btn.secondary {
+  background: #333;
+  color: #ff6a00;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
+}
+
+/* Audio visualizers */
+.meter {
+  height: 10px;
+  border-radius: 999px;
+  background: #333;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.meter > div {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #ff1a1a, #ff6a00);
+  transition: width 0.1s linear;
+}
+canvas {
+  width: 100%;
+  height: 80px;
+  border-radius: 12px;
+  background: #0b0b0b;
+  margin-bottom: 1.5rem;
+}
+
+/* Transcript panels */
+.transcripts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.panel {
+  background: #222;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: inset 0 0 6px rgba(255,106,0,0.3);
+}
+.panel h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #ff6a00;
+}
+.log {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  background: #111;
+  color: #f3f4f6;
+  padding: 0.5rem;
+  min-height: 120px;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  color: #888;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow {
+  from { text-shadow: 0 0 8px #ff1a1a; }
+  to { text-shadow: 0 0 18px #ff6a00; }
+}
